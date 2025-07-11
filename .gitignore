@@ -3,5 +3,6 @@
 slimserve
 *.log
 
+dist/
 data/*.png
 data/*.jpg
