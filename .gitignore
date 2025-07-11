@@ -4,5 +4,5 @@ slimserve
 *.log
 
 data/*.png
-data/*.jpg# Added by goreleaser init:
+data/*.jpg
 dist/
