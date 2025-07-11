@@ -2,8 +2,8 @@ apiVersion: v2
 name: slimserve-helm
 description: A lightweight HTTP file server designed with simplicity and security in mind.
 type: application
-version: 3.5.2
-appVersion: 1.1.1
+version: 4.6.3
+appVersion: 2.2.2
 projectUrl: https://github.com/xeome/slimserve
 maintainers:
 - name: Emin
