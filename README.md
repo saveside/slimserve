@@ -111,7 +111,7 @@ export HELM_EXPERIMENTAL_OCI=1
 
 ```bash
 # Deploy SlimServe
-helm install slimserve oci://ghcr.io/xeome/slimserve-helm --version 2.3.2 --namespace slimserve --create-namespace
+helm install slimserve oci://ghcr.io/xeome/slimserve-helm --version 2.4.2 --namespace slimserve --create-namespace
 ```
 
 ### Manual Docker Run
