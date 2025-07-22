@@ -24,3 +24,5 @@ jobs:
   helm-releaser:
     needs: version-bumper
     uses: ./.github/workflows/helm_releaser.yml
+    with:
+      version: ${{ github.ref_name }}

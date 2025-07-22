@@ -4,8 +4,16 @@ on:
   push:
     paths:
       - 'manifests/helm/**'
+    branches:
+      - '**'
+    tags-ignore:
+      - '**'
   workflow_dispatch:
   workflow_call:
+    inputs:
+      version:
+        required: true
+        type: string
 
 jobs:
   release:
