@@ -21,6 +21,7 @@ builds:
       - arm64
     flags:
       - -trimpath
+      - -buildvcs=false
     ldflags:
       - -s -w
       - -X main.version={{.Version}}
