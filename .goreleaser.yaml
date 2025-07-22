@@ -23,7 +23,6 @@ builds:
       - -trimpath
       - -buildvcs=false
     ldflags:
-    ldflags:
       - -s -w
       - -X slimserve/internal/version.Version={{.Version}}
       - -X slimserve/internal/version.CommitHash={{.Commit}}
