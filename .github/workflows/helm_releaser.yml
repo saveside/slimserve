@@ -4,6 +4,10 @@ on:
   push:
     paths:
       - 'manifests/helm/**'
+    branches:
+      - '**'
+    tags-ignore:
+      - '**'
   workflow_dispatch:
   workflow_call:
 
