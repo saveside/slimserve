@@ -30,7 +30,3 @@ jobs:
           args: release --clean
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VERSION: ${{ github.ref_name }}
-          COMMIT_HASH: ${{ github.sha }}
-          BUILD_USER: ${{ github.actor }}
-          BUILD_DATE: ${{ github.run_started_at }}
