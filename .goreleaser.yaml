@@ -5,6 +5,12 @@ before:
     - go mod tidy
     - go generate ./...
 
+env:
+  - VERSION={{ .Env.VERSION }}
+  - COMMIT_HASH={{ .Env.COMMIT_HASH }}
+  - BUILD_DATE={{ .Env.BUILD_DATE }}
+  - BUILD_USER={{ .Env.BUILD_USER }}
+
 builds:
   - env:
       - CGO_ENABLED=0
@@ -16,10 +22,10 @@ builds:
     flags:
       - -trimpath
     ldflags:
-      - -X slimserve/internal/version.Version={{.Version}}
-      - -X slimserve/internal/version.CommitHash={{.GitCommit}}
-      - -X slimserve/internal/version.BuildDate={{.Date}}
-      - -X slimserve/internal/version.BuildUser={{.Env.GITHUB_ACTOR}}
+      - -X slimserve/internal/version.Version=${VERSION}
+      - -X slimserve/internal/version.CommitHash=${COMMIT_HASH}
+      - -X slimserve/internal/version.BuildDate=${BUILD_DATE}
+      - -X slimserve/internal/version.BuildUser=${BUILD_USER}
     main: ./cmd/slimserve/main.go
 
 archives:
