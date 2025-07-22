@@ -16,7 +16,10 @@ builds:
     flags:
       - -trimpath
     ldflags:
-      - -s -w $(LDFLAGS)
+      - -X slimserve/internal/version.Version={{.Version}}
+      - -X slimserve/internal/version.CommitHash={{.CommitSHA}}
+      - -X slimserve/internal/version.BuildDate={{.Date}}
+      - -X slimserve/internal/version.BuildUser={{.Env.GITHUB_ACTOR}}
     main: ./cmd/slimserve/main.go
 
 archives:
