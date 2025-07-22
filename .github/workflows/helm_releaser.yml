@@ -10,10 +10,6 @@ on:
       - '**'
   workflow_dispatch:
   workflow_call:
-    inputs:
-      version:
-        required: true
-        type: string
 
 jobs:
   release:
@@ -32,6 +28,9 @@ jobs:
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Show chart version
+        run: grep '^version:' manifests/helm/Chart.yaml
 
       - name: Install Helm
         uses: azure/setup-helm@v3
